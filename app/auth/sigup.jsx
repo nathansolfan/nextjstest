@@ -1,6 +1,16 @@
 import React from 'react'
 
 export default function Signup() {
+
+    const {}  = supabase.auth.signUp({
+        email,
+        password,
+        options:{
+            emailRedirectTo: `${location.origin}`
+        }
+    })
+
+
   return ( 
   <form onSubmit={(e) => handleSubmit(e, email, password )}>
   <label>
