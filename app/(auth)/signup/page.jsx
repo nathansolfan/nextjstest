@@ -1,5 +1,6 @@
 "use client"
 import supabase from '@/app/Supabase'
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 
@@ -30,8 +31,10 @@ if(error){
 }
 
 
-  return ( 
-  <form onSubmit={(e) => handleSubmit(e, email, password )}>
+  return (
+    <main>
+    <Link href="/">Home</Link>
+  <form onSubmit={(e) => handleSubmnait(e, email, password )}>
   <label>
       <span>Email:</span>
       <input
@@ -55,6 +58,6 @@ if(error){
   </label>
   {/* When pressed we have access to the Event (e) on the onSubmit() */}
   <button className='btn-primary'>Submit</button>
-</form>
+</form></main>
   )
 }
