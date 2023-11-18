@@ -5,7 +5,9 @@ export default function Navbar() {
   return (
     <main>
     <Link href="/">Home</Link>
-    <Link href="/">Sign up</Link>
+    <Link href="/signup">Sign up</Link>
+    <Link href="/about">About</Link>
+    <Link href="/login">Login</Link>
     </main>
   )
 }
