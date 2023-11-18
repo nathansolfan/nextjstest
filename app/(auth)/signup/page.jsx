@@ -1,6 +1,7 @@
 "use client"
+import supabase from '@/app/Supabase'
 import React, { useState } from 'react'
-import supabase from '../../Supabase'
+
 
 
 export default function Signup() {
