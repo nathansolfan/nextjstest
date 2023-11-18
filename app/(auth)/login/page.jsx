@@ -28,11 +28,14 @@ export default function Login() {
       password,
     })
     router.refresh()
+    router.push("/")
+
   }
 
   const handleSignOut = async () => {
     await supabase.auth.signOut()
     router.refresh()
+    router.push("/")
   }
 
   return (
