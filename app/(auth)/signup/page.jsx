@@ -7,14 +7,26 @@ export default function Signup() {
     const [email, setEmail]= useState('')
     const [password, setPassword]= useState('')
     
+// this method is called when user submits - the (e - event) is given when the form is passed
 
-    const {}  = supabase.auth.signUp({
+const handleSubmit = async (e) => {
+    // prevent default
+    e.preventDefault()
+    const {user, error}  = await supabase.auth.signUp({
         email,
         password,
         options:{
             emailRedirectTo: `${location.origin}`
         }
     })
+// Access to user and error, display it on the log
+if(user){
+    console.log(user, "signed yea")
+}
+if(error){
+    console.log(error.message)
+}
+}
 
 
   return ( 
