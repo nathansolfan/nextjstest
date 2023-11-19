@@ -34,7 +34,7 @@ if(error){
   return (
     <main>
     <Link href="/">Home</Link>
-  <form onSubmit={(e) => handleSubmnait(e, email, password )}>
+  <form onSubmit={(e) => handleSubmit(e, email, password )}>
   <label>
       <span>Email:</span>
       <input
