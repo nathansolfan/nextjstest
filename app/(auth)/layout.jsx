@@ -16,7 +16,7 @@ if(!data.session){
   } 
   return (
     <>
-    <Navbar/>
+    <Navbar user={data.session.user}/>
     {children}
     </>
   )
