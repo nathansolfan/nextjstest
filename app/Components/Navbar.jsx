@@ -8,6 +8,7 @@ export default function Navbar( {user}) {
     <Link href="/signup">Sign up</Link>
     <Link href="/about">About</Link>
     <Link href="/login">Login</Link>
+    {user && <span>Hello, {user.email}</span>}
     </main>
   )
 }

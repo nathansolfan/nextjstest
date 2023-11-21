@@ -17,7 +17,7 @@ if(!data.session){
     <>
     
     <Navbar user={data.session.user}/>
-    <p>Title Layout About-ME</p>
+    <p>Title before children, or the page.js</p>
     {children}
     </>
   )
