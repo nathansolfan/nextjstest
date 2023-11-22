@@ -1,17 +1,14 @@
 import React from "react";
-import Navbar from "./Components/Navbar";
-import { cookies } from "next/headers";
+import Navbar from "../Components/Navbar";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-
+import { cookies } from "next/headers";
 export default async function Home() {
-  // get the cookies > session > display email
   const supabase = createServerComponentClient({ cookies });
   const { data } = await supabase.auth.getSession();
 
   return (
     <main>
-      <p>Home Mamma mia</p>
-      <Navbar user={data.session.user} />
+      <p>Mamma mia meu amigo</p>
     </main>
   );
 }

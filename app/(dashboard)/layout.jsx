@@ -14,10 +14,9 @@ if(!data.session){
     redirect('/login')
   }
   return (
-    <>
-    
+    <>    
     <Navbar user={data.session.user}/>
-    <p>Title before children, or the page.js</p>
+    {/* I can add <p> or w/. here if i want */}
     {children}
     </>
   )
