@@ -32,11 +32,11 @@ export default function Login() {
 
   }
 
-  const handleSignOut = async () => {
-    await supabase.auth.signOut()
-    router.refresh()
-    router.push("/")
-  }
+  // const handleSignOut = async () => {
+  //   await supabase.auth.signOut()
+  //   router.refresh()
+  //   router.push("/login")
+  // }
 
   return (
     <>
@@ -54,7 +54,6 @@ export default function Login() {
       />
       <button onClick={handleSignUp}>Sign up</button>
       <button onClick={handleSignIn}>Sign in</button>
-      <button onClick={handleSignOut}>Sign out</button>
     </>
   )
 }

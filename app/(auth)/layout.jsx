@@ -10,13 +10,13 @@ export default async function AutoLayout({children}) {
     const {data} = await supabase.auth.getSession()
 
         // cant use Router in server components
-if(!data.session){
+if(data.session){
     // when user is in the dashboard, but not logged in, Sends it to /login
-    redirect('/login')
+    redirect('/')
   } 
   return (
     <>
-    <Navbar user={data.session.user}/>
+    {data.session && <Navbar user={data.session.user}/>}
     {children}
     </>
   )
