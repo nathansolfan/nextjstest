@@ -45,6 +45,7 @@ export default function Login() {
       onChange={(e) => setEmail(e.target.value)} 
       value={email} 
       />
+      <br></br>
       <input
         type="password"
         name="password"

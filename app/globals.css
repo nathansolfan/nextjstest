@@ -16,7 +16,12 @@ h1, h2 {
   @apply font-bold text-red-600 text-lg;
 }
 main {
-  @apply max-w-5xl my-12 mx-auto px-8;
+  @apply max-w-5xl mx-auto px-8;
+}
+@media (min-width: 768px) {
+  main {
+    @apply px-12; /* Wider padding on medium screens and up */
+  }
 }
 main > h2 {
   @apply mb-4 pb-2 text-base;
@@ -24,6 +29,7 @@ main > h2 {
 p > a {
   @apply text-yellow-600 underline;
 }
+
 
 /* Nav Styles */
 nav {
@@ -74,30 +80,5 @@ form button {
   @apply border-2 border-red-600 bg-red-400 text-red-900 py-1 px-2 rounded-sm block max-w-fit my-4 mx-auto;
 }
 
-/* Card Styles */
-.card {
-  @apply bg-white shadow-sm rounded-md py-3 px-4 my-4 relative overflow-hidden;
-}
-.card h3 {
-  @apply font-bold text-gray-800 text-sm mb-0;
-}
-.card p {
-  @apply my-4 text-sm leading-6;
-}
 
-/* Pill Styles */
-.pill {
-  @apply py-1 px-2 mt-3 inline-block text-xs font-semibold;
-}
-.pill.high {
-  @apply bg-red-400 text-red-800;
-}
-.pill.medium {
-  @apply bg-yellow-400 text-yellow-800;
-}
-.pill.low {
-  @apply bg-green-400 text-green-800;
-}
-.card .pill {
-  @apply absolute bottom-0 right-0 rounded-tl-md;
-}
+
