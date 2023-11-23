@@ -8,16 +8,21 @@ export default async function DashboardLayout({children}) {
 
     const supabase = createServerComponentClient({cookies})
     const {data} = await supabase.auth.getSession()
+    
+    let user = null;
+    if (data.session) {
+      user = data.session.user;
+      console.log("User data:", user); // Debugging line
 
-    // cant use Router in server components
-if(!data.session){
-    // when user is in the dashboard, but not logged in, Sends it to /login
-    redirect('/login')  
-  }
+      // Optionally, redirect to /login if not logged in
+      // if (!user) {
+      //   redirect("/login");
+      // }
+    }
   return (
     <>    
-    <Navbar user={data.session.user}/>
-    {/* I can add <p> or w/. here if i want */}
+<Navbar user={user}/>    
+{/* I can add <p> or w/. here if i want */}
     {children}
     </>
   )

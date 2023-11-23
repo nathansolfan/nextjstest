@@ -2,7 +2,9 @@ import Link from 'next/link'
 import React from 'react'
 import LogoutButton from './Logout'
 
-export default function Navbar( {user}) {
+export default function Navbar({user}) {
+  console.log("Navbar user prop:", user); // Debugging line
+
   return (
     <nav>
     <Link href="/">Home</Link>

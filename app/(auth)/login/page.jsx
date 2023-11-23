@@ -2,6 +2,7 @@
 
 
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
@@ -29,17 +30,11 @@ export default function Login() {
     })
     router.refresh()
     router.push("/")
-
-  }
-
-  // const handleSignOut = async () => {
-  //   await supabase.auth.signOut()
-  //   router.refresh()
-  //   router.push("/login")
-  // }
+  }  
 
   return (
     <>
+    <Link href="/">Home</Link> <br></br>
       <input 
       name="email" 
       onChange={(e) => setEmail(e.target.value)} 
