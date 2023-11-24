@@ -11,6 +11,7 @@ export default function Navbar({user}) {
     <Link href="/signup">Sign up</Link>    
     <Link href="/login">Login</Link>
     <Link href="/about">About</Link>
+    <Link href="/blog">Blog</Link>
     {user && <span> - Hello, {user.email}</span>}
     <LogoutButton/>
     </nav>

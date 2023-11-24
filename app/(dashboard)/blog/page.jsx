@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 
 export default function Blog() {
@@ -5,9 +6,20 @@ export default function Blog() {
 const [title, setTitle] = useState('')
 const [body, setBody] = useState('')
 
+const handleSubmit = (e) =>{
+  e.preventDefault()
+
+  const blog = {
+    title, body }
+
+    const response = fetch('http://localhost:3000')
+
+
+    
+}
 
   return (
-    <form action="">
+    <form onSubmit={(e) => handleSubmit()}>
         <label>
             <span>Title:</span>
             <input type="text"
@@ -24,6 +36,7 @@ const [body, setBody] = useState('')
             value={body}
             />
         </label>
+        <button></button>
     </form>
   )
 }
