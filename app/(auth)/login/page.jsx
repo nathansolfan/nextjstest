@@ -12,7 +12,7 @@ export default function Login() {
   const router = useRouter()
   const supabase = createClientComponentClient()
 
-  const handleSignUp = async () => {
+  const handleSignUp = async (e) => {
     await supabase.auth.signUp({
       email,
       password,
