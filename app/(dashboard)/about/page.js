@@ -3,6 +3,7 @@ import React from "react";
 export default function About() {
   return (
     <main>
+      <h2>Title</h2>
       <p>
         I have a strong foundation in front-end and back-end development, with a
         keen eye for creating responsive and visually appealing web designs. My
@@ -13,6 +14,8 @@ export default function About() {
         to MongoDB. This allows me to create dynamic, data-driven solutions that
         meet the unique needs of businesses and users alike.
       </p>
+
+      <p>I am Nathan and I`ve been studying web development</p>
     </main>
   );
 }
