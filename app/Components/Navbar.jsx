@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import LogoutButton from './Logout'
+import ForgotPassword from './ForgotPassword';
 
 export default function Navbar({user}) {
   console.log("Navbar user prop:", user); // Debugging line
@@ -15,6 +16,7 @@ export default function Navbar({user}) {
     <Link href="/blog/create">Create</Link>
     {user && <span> - Hello, {user.email}</span>}
     <LogoutButton/>
+    <ForgotPassword/>
     </nav>
   )
 }
